@@ -1,55 +1,47 @@
-# 🚀 Join Project (Version 1.0)
-> Basierend auf der offiziellen Figma-Vorlage v1.0.
+# Join Issue Collector
 
-Willkommen beim **Join Project**! Dieses Repository ist der zentrale Knotenpunkt für unsere Entwicklung. Unser Ziel ist eine pixelgenaue Umsetzung des Designs bei gleichzeitig hoher Code-Qualität.
+Join ist ein webbasiertes Aufgabenmanagement-Projekt, das im Rahmen eines Gruppenprojekts entstanden ist. Diese Anwendung bietet eine gemeinsame Oberflaeche, um Aufgaben und Kontakte zu verwalten. Die Anwedung wurde zu Join - Issue Collector erweitert. Es können Task per Email hinzugefügt werden. Das hinzufügen wird mittels n8n und einer KI realisiert.
 
----
+## Funktionen
 
-## 💻 Tech Stack
-Wir setzen diese Anwendung mit einem modernen Vanilla-JS-Ansatz um:
-* **HTML5** – Semantische Struktur.
-* **CSS3** – Styling und Layout (getreu dem Figma-Design).
-* **JavaScript (ES6+)** – Kernlogik und Interaktivität.
-* **JSDoc** – Zur standardisierten Dokumentation unseres Codes.
+- Benutzerregistrierung und Anmeldung sowie Gastzugang
+- Aufgaben erstellen, bearbeiten und nach Status auf dem Board organisieren
+- Kontakte verwalten und Aufgaben Personen zuweisen
+- Zusammenfassung der Aufgaben auf der Uebersichtsseite
+- Hinzufügen von Aufgaben per Email mittels KI
 
----
+## Technologie
 
-## 📡 Kommunikation & Daily Stand-up
-Um synchron zu bleiben und Reibungsverluste zu vermeiden, nutzen wir eine feste Routine.
+- HTML
+- CSS
+- JavaScript
+- Supabase als vorgesehene Datenbank fuer die E-Mail-Task-Erweiterung
+- n8n und KI fuer die automatisierte Verarbeitung von E-Mail-Anfragen
 
-### 💬 Discord Routine
-Jedes Teammitglied postet täglich einen **Stand-up-Status** im entsprechenden Discord-Kanal. 
+## Geplante Erweiterung: Aufgaben per E-Mail
 
-**Dein Post sollte folgende Punkte enthalten:**
-1.  ✅ **Zuletzt erledigt:** Was habe ich als Letztes abgeschlossen?
-2.  📅 **Heute:** Woran arbeite ich heute konkret?
-3.  ⏳ **Zeitaufwand:** Wie viel Zeit plane ich heute für das Projekt ein?
-4.  ❓ **Fragen/Blocker:** Gibt es Probleme oder Fragen, die mich aufhalten?
+Nutzer sollen Aufgaben direkt per E-Mail anlegen koennen. Eine eingehende E-Mail wird automatisiert mit n8n und KI verarbeitet. Die erkannten Aufgabeninformationen werden anschliessend als Task in Supabase gespeichert und stehen in der Anwendung zur Verfuegung.
 
----
+Pro Nutzer sind maximal 10 E-Mail-Anfragen pro Tag erlaubt. Weitere Anfragen werden abgelehnt, sobald dieses Tageslimit erreicht ist.
 
-## 📂 Organisation & Tools
-* **Aufgaben-Management:** Wir nutzen [Trello].
-    * Picke dir eigenständig Aufgaben aus dem "Backlog".
-    * Verschiebe sie während der Bearbeitung nach "In Progress".
-* **Discord:** Schau regelmäßig für Updates und schnelle Absprachen rein.
+Der Ablauf ist vorgesehen als:
 
----
+1. Nutzer sendet eine E-Mail mit einem Aufgabenwunsch.
+2. n8n nimmt die Anfrage entgegen und startet den Automationsablauf.
+3. Eine KI extrahiert die Aufgabeninformationen aus dem E-Mail-Text.
+4. Die Anfrage wird geprueft, insbesondere auf das Tageslimit von 10 Anfragen.
+5. Bei gueltiger Anfrage wird die Aufgabe in Supabase gespeichert.
 
-## 🌿 Branching-Strategie
-Damit unser Code stabil bleibt, halten wir uns an dieses System:
+Die E-Mail-Automation ist eine Erweiterung des Projekts und muss eingerichtet werden. Dazu gehoeren der n8n-Workflow, die KI-Anbindung, die Supabase-Verbindung sowie eine zuverlaessige Umsetzung des Tageslimits.
 
-1.  **Individual Branches:** Die Aktuelle aufgabe wird meist in deiner Branch bearbeitet.
-2.  **Tester Branch:** Sobald dein Feature fertig und lokal getestet ist, mergest du es in den `tester`-Branch.
-3.  **Main/Production:** Nur stabiler und geprüfter Code vom `tester`-Branch wird final in den `main` gemergt.
+## Projektstruktur
 
-> [!IMPORTANT]
-> **Vermeide direktes Mergen in den `main` Branch!** Nutze immer zuerst den `tester`-Branch für die Integration.
+- `index.html`: Anmeldung und Einstieg in die Anwendung
+- `pages/`: Seiten fuer Board, Aufgaben, Kontakte, Uebersicht und weitere Inhalte
+- `scripts/`: Anwendungslogik, UI, Services und Hilfsfunktionen
+- `styles/` und `style.css`: Layout und Gestaltung
+- `assets/`: Bilder, Schriften und Favicons
 
----
+## Starten
 
-## 🚀 Erste Schritte
-Um lokal an dem Projekt zu arbeiten, kannst du es einfach klonen:
-
-```bash
-git clone [DEIN-REPO-LINK]
+Das Frontend besteht aus statischen HTML-, CSS- und JavaScript-Dateien. Oeffne das Projekt ueber einen lokalen Webserver, damit Seiten und Skripte korrekt geladen werden. Fuer die laufende Anwendung muessen ausserdem die benoetigten Backend-Konfigurationen eingerichtet sein.
