@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/font.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/issue_collector/welcome.css" />
 
     <link rel="stylesheet" href="./styles/login.css" />
 
@@ -52,14 +53,26 @@
       <a href="./pages/signup.html" class="primary-btn">Sign up</a>
     </div>
 
-    <div class="login-wrapper">
-      <img class="login-logo" src="../assets/imgs/join-logo.svg" alt="Join logo" />
-      <div class="login-card">
-        <h1>Welcome</h1>
+    <div class="welcome-card">
+      <div class="welcome-message">
+        <div class="welcome-text">
+          <p>Welcome</p>
+          <div class="welcome-underline"></div>
+        </div>
+        <p class="subtext">
+          Pick the option that suits your role: create a request as a stakeholder or log in if
+          you're part of the team.
+        </p>
+      </div>
 
-        <div class="button-group">
-          <button type="submit" class="primary-btn" id="login-button">Log in</button>
-          <button type="button" class="secondary-btn" id="login-guest-button">Guest Log in</button>
+      <div class="welcome-button-group">
+        <div class="button-group-item">
+          <label class="subtext" for="login-button">Are you a stakeholder?</label>
+          <button type="submit" class="primary-btn" id="login-button">Create a request</button>
+        </div>
+        <div class="button-group-item">
+          <label class="subtext" for="login-guest-button">Are you a team member?</label>
+          <button type="button" class="secondary-btn" id="login-guest-button">Member Log in</button>
         </div>
       </div>
 

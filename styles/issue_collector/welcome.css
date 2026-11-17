@@ -1,0 +1,75 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(42, 54, 71, 1);
+}
+
+.welcome-wrapper {
+}
+
+.welcome-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(255, 255, 255, 1);
+
+  border-radius: 30px;
+  padding: 56px 72px;
+  gap: 56px;
+}
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  max-width: 645px;
+  width: 100%;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.subtext {
+  font-size: 23px;
+}
+
+.welcome-underline {
+  width: 120px;
+  height: 3px;
+  background-color: rgba(23, 125, 168, 1);
+}
+
+.welcome-button-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button-group-item {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.button-group-item button {
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  padding: 15px 24px;
+  border-radius: 8px;
+}

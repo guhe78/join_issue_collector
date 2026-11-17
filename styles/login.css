@@ -211,11 +211,11 @@ form {
     opacity 300ms ease,
     background 300ms ease;
 }
-
-.splash.animate .splash-logo {
+/* Das hier noch entfernen, wenn die Animation der Splash-Logo nicht mehr benötigt wird */
+/* .splash.animate .splash-logo {
   transform: translate(-42vw, -36vh) scale(0.55);
   transition: transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1);
-}
+} */
 
 body.has-splash .login-logo {
   opacity: 0;

@@ -1,6 +1,15 @@
 @font-face {
-  font-family: 'Inter Variable';
-  src: url('../assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype-variations');
+  font-family: "Inter Variable";
+  src: url("../assets/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-stretch: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/fonts/OpenSans-VariableFont_opsz,wght.ttf") format("truetype-variations");
   font-weight: 100 900;
   font-stretch: normal;
   font-style: normal;
@@ -8,26 +17,26 @@
 }
 
 h1 {
-  font-family: 'Inter Variable', sans-serif;
+  font-family: "Inter Variable", sans-serif;
   font-weight: 700;
   font-size: 61px;
 }
 
 h2 {
-  font-family: 'Inter Variable', sans-serif;
+  font-family: "Inter Variable", sans-serif;
   font-weight: 500;
   font-size: 47px;
   color: var(--primary-color);
 }
 
 h3 {
-  font-family: 'Inter Variable', sans-serif;
+  font-family: "Inter Variable", sans-serif;
   font-weight: 700;
   font-size: 27px;
 }
 
 h4 {
-  font-family: 'Inter Variable', sans-serif;
+  font-family: "Inter Variable", sans-serif;
   font-weight: 700;
   font-size: 20px;
 }
